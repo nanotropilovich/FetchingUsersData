@@ -6,10 +6,9 @@
 //
 
 import Foundation
-
-class UserData: ObservableObject  {
-    @Published var users: String = ""
- 
+@MainActor
+class UserData: ObservableObject {
+  @Published var users: [User] = []
  
   init() {
     Task {
